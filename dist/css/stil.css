@@ -1,0 +1,375 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+body{
+	background-color: #191142;
+}
+header{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	margin-top: 5px;
+}
+header .logo-arkaplan{
+	width: 90vw;
+	height: 60px;
+	margin: -25px auto 0 auto;
+}
+.logo-arkaplan span{
+	width: 90vw;
+	height:1px;
+	margin-top: 10px;
+	display: block;
+	background-color: #8AFACC;
+	box-shadow: 5px 5px 50px #8AFACC;
+	animation: cizgianimasyon 5s infinite alternate;
+}
+@keyframes cizgianimasyon{
+	0%{
+	box-shadow: 5px 5px 50px #8AFACC;
+	background-color: #8AFACC;
+	}
+	25%{
+	box-shadow: 5px 5px 50px #63B7DB;
+	background-color: #63B7DB;
+	}
+	50%{
+	box-shadow: 5px 5px 50px #EABBF5;
+	background-color: #EABBF5;
+	}
+	75%{
+	box-shadow: 5px 5px 50px #17E67E;
+	background-color: #17E67E;
+	}
+	100%{
+	box-shadow: 5px 5px 50px #13AD92;
+	background-color: #13AD92;
+	}
+}
+header {
+	position: absolute;
+}
+header .logo .kucuk img{
+	width: 85px;
+	height: 100px;
+	display: inline-block;
+}
+header .logo .buyuk img{
+	width: 100%;
+	max-width: 150px;
+	display: inline-block;
+}
+header .logo .kucuk{
+	display: inline-block;
+}
+header .logo .buyuk{
+	display: inline-block;
+}
+.logo{
+    text-align: center;
+}
+.logo-kutucuk{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.sag-logo{
+	align-self: flex-end;
+}
+#menucuk{
+	display: inline-block;
+	position: fixed;
+	left: 50px;
+	margin-top: 50px;
+	z-index: 1;
+	user-select: none;
+}
+#menucuk input{
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2; 
+}
+#menucuk span{
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background: #59DBCA;
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menucuk span:first-child{
+	transform-origin: 0% 0%;
+}
+#menucuk span:nth-last-child(2){
+	transform-origin: 0% 100%;
+}
+#menucuk input:checked ~ span{
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #59DBCA;
+}
+#menucuk input:checked ~ span:nth-last-child(3){
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menucuk input:checked ~ span:nth-last-child(2){
+	transform: rotate(-45deg) translate(0, -1px);
+}
+#menuler{
+	position: fixed;
+	width: 300px;
+	height: 100vh;
+	margin: -100px 0 0 -50px;
+	padding: 0 50px;
+	padding-top: 125px;
+	background: #271B69;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menuler li{
+	padding: 10px 0;
+	font-size: 22px;
+}
+#menuler li:hover{
+	color: #bfbfbf;
+}
+#menucuk input:checked ~ ul{
+	transform: none;
+}
+#menucuk ul a{
+	color: #fff;
+	text-decoration: none;
+}
+.bosluks{
+	padding: 90px;
+	background: linear-gradient(180deg, rgba(86,60,232,1) 0%, rgba(25,17,66,1) 100%);;
+}
+footer{
+	background: linear-gradient(0deg, rgba(86,60,232,1) 0%, rgba(25,17,66,1) 100%);;
+	color: #fff;
+}
+.footer-kutu{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.telif-hakki{
+	align-self: flex-end;
+}
+footer .logo img{
+	width: 100%;
+	max-width: 150px;
+	display: inline-block;
+}
+.footer-menu ul{
+	list-style: none;
+	padding: 20px;
+}
+.footer-menu ul a{
+	color: #fff;
+	text-decoration: none;
+}
+.footer-menu li:hover{
+	color: #666666;
+}
+.footer-menu li{
+	margin: 5px;
+}
+.ana-icerik{
+	width: 80vw;
+	margin: 0 auto;
+}
+.ana-icerik .icerik{
+	display: flex;	
+	flex-direction: column;
+}
+.yatay-kutu{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+.icerik-kutu{
+	max-width: 450px;
+	margin: 20px 0;
+	background-color: #22185C;
+	border-radius: 30px;
+}
+.ortala{
+	justify-content: center;
+}
+.ana-icerik .icerik .yatay-kutu a{
+	text-decoration: none;
+	color: white;
+}
+.ana-icerik .icerik-kutu .resim {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.ana-icerik .icerik-kutu .resim img{
+	max-width: 450px;
+	max-height: 253px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+.yazi h2{
+	margin: 0 0 20px 20px;
+}
+.yazi p{
+	margin: 0 20px;
+	padding-bottom: 20px;
+}
+.buyuk-kutu{
+	color: white;
+}
+.buyuk-kutu .kutu-aciklama{
+	margin-left: 25px;
+}
+.buyuk-kutu .alt-kutu{
+	margin-bottom: 60px;
+}
+.alt-kutu .flex{
+	display: flex;
+	justify-content: center;
+}
+.sol-icerik .icerik-resim img{
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+}
+.sol-icerik{
+	margin-right: 50px;
+}
+form{
+	max-width: 500px;
+	margin: 350px auto;
+	background-color: #22185C;
+	border-radius: 20px;
+}
+.form-baslik{
+	text-align: center;
+	padding: 40px;
+	color: white;
+
+}
+input{
+	width: 100%;
+	border-radius: 10px;
+	border: none;
+	padding: 5px;
+	font-size: 18px;
+	text-indent: 5px;
+}
+label{
+	color: white;
+	display: block;
+}
+.form-icerik{
+	padding: 0 20px 10px 20px;
+}
+.buton-ortala{
+	text-align: center;
+}
+form button{
+	padding: 15px 30px;
+	border-radius: 10px;
+	background-color: #3E2CA8;
+	border: none;
+	color: white;
+}
+form button:hover{
+	background-color: #563CE8;
+	color: white;
+}
+.ana-icerik .hakkimizda-baslik{
+ 	color: white;
+ 	text-align: center;
+ 	margin-top: 140px;
+}
+.ana-icerik .hakkimizda{
+	color: white;
+    text-align: center;
+	padding: 150px 0;
+	font-size: 20px;
+
+}
+@media screen and (max-width: 1215px){
+	.icerik-kutu{
+		max-width: 350px;
+	}
+	.ana-icerik .icerik-kutu .resim img{
+		max-width: 350px;
+	}
+}
+@media screen and (max-width: 900px){
+	.icerik-kutu{
+		max-width: 290px;
+	}
+	.ana-icerik .icerik-kutu .resim img{
+		max-width: 290px;
+	}
+}
+@media screen and (max-width: 768px){
+	.yatay-kutu{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.icerik-kutu{
+		max-width: 500px;
+	}
+	.ana-icerik .icerik-kutu .resim img{
+		width: 100%;
+		height: 100%;
+		max-width: 500px;
+		max-height: 282px;
+	}
+	footer .logo{
+		display: none;
+	}
+	.footer-kutu{
+		flex-direction: column-reverse;
+	}
+	.telif-hakki{
+		align-self: center;
+	}
+	.alt-kutu .flex{
+		flex-direction: column;
+		align-items: center;
+	}
+	.sol-icerik{
+		margin-right:0 ;
+	}
+	.sol-icerik .icerik-resim img{
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 20px;
+	    max-width: 425px;
+	}
+}
+@media screen and (max-width: 500px){
+	.menu input{
+		left: -50px!important;
+		background: red;
+		opacity: 1;
+	}
+	.menu span{
+		margin-left:-40px!important;
+	}
+}
